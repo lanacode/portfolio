@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --azul-claro: #eff6f6;
+    --azul-sombra: #e0e9f3;
+    --branco: #ffffff;
+    --preto: #000;
+
+    --behance: #1d59ff;
+    --instagram: #e100b0;
+    --github: #555555;
+    --whatsapp: #00c22d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5%;
+    background-color: var(--azul-claro);
+    border-bottom: solid 2px var(--azul-sombra);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--preto);
+    font-size: 24px;
+}
+
+.navbar {
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.navbar:hover {
+    background-color: var(--azul-sombra);
+}
+
+.redesSociais a svg {
+    width: 35px;
+    height: 35px;
+    transition: color 0.5s ease;
+}
+
+.redesSociais .behance:hover {
+    color: var(--behance);
+}
+
+.redesSociais .instagram:hover {
+    color: var(--instagram);
+}
+
+.redesSociais .github:hover {
+    color: var(--github);
+}
+
+.redesSociais .whatsapp:hover {
+    color: var(--whatsapp);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr;
+    padding: 2%;
+}
+
+#inicio {
+  display: grid; /* Ativa o Grid */
+  
+  /* 1. Define 2 colunas de tamanho igual (1 fração cada) */
+  grid-template-columns: 1fr 1fr;
+  
+  /* 2. Define 2 linhas (a primeira p/ conteúdo, a segunda p/ o scroll) */
+  grid-template-rows: auto auto; 
+  
+  /* 3. Aqui está a mágica: "Desenhamos" o layout */
+  grid-template-areas: 
+    "sobre  foto"    /* Linha 1: "sobre" na col 1, "foto" na col 2 */
+    "scroll scroll"; /* Linha 2: "scroll" ocupa as duas colunas */
+    
+  /* Alinha o texto e a foto verticalmente no centro da linha deles */
+  align-items: center; 
+  
+  /* Adiciona um espaço entre o texto e a foto */
+  gap: 20px; 
+}
+
+/* 4. Agora, dizemos qual elemento vai em qual "apelido" */
+#containerSobre {
+  grid-area: sobre; /* Vai para a área "sobre" */
+}
+
+#containerFoto {
+  grid-area: foto; /* Vai para a área "foto" */
+  
+  /* Opcional: Centraliza a foto dentro da área dela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll {
+  grid-area: scroll; /* Vai para a área "scroll" */
+  
+  /* O seu CSS original para .scroll já centraliza o conteúdo 
+    dentro dele, então não precisamos mexer mais.
+  */
+}
+
+/* Opcional: Garante que sua foto não fique muito grande */
+#containerFoto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.main__action {
+    width: 150px;
+    align-items: center;
+}
+
+.main__action:hover .main__scroll-box {
+    animation: scroll-down 3s infinite;
+}
+
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    35% {
+        transform: translateY(1rem);
+        opacity: 0.5;
+    }
+
+    70% {
+        transform: translateY(-1rem);
+        opacity: 0.5;
+    }
+}
