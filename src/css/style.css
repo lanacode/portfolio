@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;700;800&display=swap');
+
+/* ==========================================================================
+   VARIAVEIS E IDENTIDADE VISUAL (LanaaTech)
+   ========================================================================== */
+:root {
+  --bg-dark: #000000;
+  --card-dark: #222222;
+  --accent-purple: #510089;
+  --accent-neon: #ab35ff;
+  --text-white: #ffffff;
+  --text-gray: #a0a0a0;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+/* Base Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; /* Montserrat Medium */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Tipografia Estrita */
+.font-logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Inter Regular */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Montserrat ExtraBold */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* ==========================================================================
+   COMPONENTES ESTILIZADOS
+   ========================================================================== */
+
+/* Navbar Glassmorphism */
+nav-header {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Estilo base dos links da Navbar */
+.nav-link {
+  position: relative;
+  color: #a0a0a0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Linha roxa invisível que se expande no hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ab35ff;
+  box-shadow: 0 0 8px #ab35ff;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito ao passar o mouse */
+.nav-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(171, 53, 255, 0.4);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Botões com Efeito Glow Inspired by Dark UI */
+.btn-purple {
+  background-color: var(--accent-purple);
+  color: var(--text-white);
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-purple:hover {
+  background-color: #6800b3;
+  box-shadow: 0 0 20px rgba(81, 0, 137, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-outline-purple {
+  border: 1px solid var(--accent-purple);
+  color: var(--text-white);
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+  background-color: rgba(81, 0, 137, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Cards com Estilo Dark High-End (#222222) */
+article, .card-custom {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+article:hover, .card-custom:hover {
+  border-color: rgba(81, 0, 137, 0.6);
+  box-shadow: 0 10px 30px rgba(81, 0, 137, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Filtros do Portfólio */
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-gray);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--accent-purple);
+  color: var(--text-white);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 15px rgba(81, 0, 137, 0.5);
+}
+
+/* Animação Fade-in ao Rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS E SIMPLIFICADOS
+   ========================================= */
+
+/* Botões do Filtro de Projetos */
+.botao-filtro {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d1d1;
+  padding: 10px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.botao-filtro.active,
+.botao-filtro:hover {
+  background-color: #ab35ff;
+  color: #ffffff;
+  border-color: #ab35ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(171, 53, 255, 0.4);
+}
+
+/* Esconde itens do portfólio no filtro em JS */
+.item-portfolio.hidden {
+  display: none;
+}
