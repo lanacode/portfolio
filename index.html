@@ -7,9 +7,10 @@
   <title>LanaaTech | Soluções Digitais</title>
   <link rel="icon" type="image/x-icon" href="./src/image/lanaatech_icone.png">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="src/css/style.css">
   <script defer src="src/js/main.js"></script>
@@ -17,6 +18,9 @@
 
 <body>
 
+  <!-- ========================================== -->
+  <!-- 1. HEADER / NAVBAR                         -->
+  <!-- ========================================== -->
   <header id="cabecalho">
     <div class="container container-nav">
       
@@ -24,17 +28,18 @@
         <img src="src/image/lanaatech_logo.png" alt="Logo LanaaTech" id="logo-lanaatech">
       </a>
 
-      <nav class="nav-menu">
+       <nav class="nav-menu">
         <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link">Home</a></li>
           <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#metricas" class="nav-link">Resultados</a></li>
-          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
       </nav>
 
       <div class="nav-cta">
-        <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn-primary btn-sm">
+        <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20gostaria%20de%20um%20orçamento!" target="_blank"
+          class="btn-primary btn-sm">
           Iniciar Projeto
         </a>
       </div>
@@ -44,24 +49,33 @@
 
   <main class="container">
 
+    <!-- ========================================== -->
+    <!-- 2. HERO PRINCIPAL                          -->
+    <!-- ========================================== -->
     <section id="inicio" class="hero-section">
-      
       <div class="hero-glow"></div>
 
       <div class="hero-topo">
-        <div class="badge-status">
-          <span class="dot-pulse"></span>
-          Soluções Digitais, Automações e Integrações de IA
-        </div>
 
         <h1 class="hero-titulo">
-          Tiro sua ideia do papel e coloco <br>
-          <span class="texto-degrade">sua empresa no topo.</span>
+          Tiro sua ideia do papel<br>
+          <span class="texto-degrade">e coloco sua empresa no topo</span>
         </h1>
 
-        <p class="hero-descricao">
-          Aplicações web sob medida, sistemas automatizados e presença audiovisual estratégica para escalar a operação e a autoridade da sua marca.
-        </p>
+         <ul class="grade-metricas">
+        <li class="item-metrica">
+          <h3 class="numero-metrica cor-roxa stats-count" num="15">+15</h3>
+          <span class="rotulo-metrica">Projetos Entregues</span>
+        </li>
+        <li class="item-metrica">
+          <h3 class="numero-metrica stats-count" num="100">100%</h3>
+          <span class="rotulo-metrica">Foco em Qualidade</span>
+        </li>
+        <li class="item-metrica">
+          <h3 class="numero-metrica cor-roxa stats-count" num="4">+4</h3>
+          <span class="rotulo-metrica">Anos em Tech</span>
+        </li>
+      </ul>
 
         <div class="hero-acoes">
           <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn-primary">
@@ -73,72 +87,17 @@
           </a>
         </div>
       </div>
-
-      <div class="vitrine-moldura">
-        <div class="vitrine-grade">
-          
-          <div class="vitrine-imagem-col">
-            <img src="src/image/lana_profile.png" alt="Ilana Nascimento - LanaaTech" class="vitrine-foto">
-          </div>
-
-          <div class="vitrine-cards-col">
-            
-            <div class="card-flutuante">
-              <div class="card-flutuante-cabecalho">
-                <span class="tag-roxa">Tecnologia</span>
-                <span class="tag-cinza">Full Stack</span>
-              </div>
-              <h3>Sistemas Web & SaaS</h3>
-              <p>Desenvolvimento moderno com máxima velocidade, segurança e adaptação mobile.</p>
-            </div>
-
-            <div class="card-flutuante">
-              <div class="card-flutuante-cabecalho">
-                <span class="tag-roxa">Audiovisual</span>
-                <span class="tag-cinza">Presencial</span>
-              </div>
-              <h3>Storymaker & Conteúdo</h3>
-              <p>Captação em tempo real para eventos e posicionamento visual magnético no perfil.</p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
     </section>
 
-    <section id="metricas" class="secao-metricas">
-      <ul class="grade-metricas">
-        <li class="item-metrica">
-          <h3 class="numero-metrica cor-roxa stats-count" num="15">+15</h3>
-          <span class="rotulo-metrica">Projetos Entregues</span>
-        </li>
-        <li class="item-metrica">
-          <h3 class="numero-metrica stats-count" num="100">100%</h3>
-          <span class="rotulo-metrica">Foco em Qualidade</span>
-        </li>
-        <li class="item-metrica">
-          <h3 class="numero-metrica cor-roxa stats-count" num="6">#6</h3>
-          <span class="rotulo-metrica">Top Dev Infinity (+500)</span>
-        </li>
-        <li class="item-metrica">
-          <h3 class="numero-metrica stats-count" num="4">+4</h3>
-          <span class="rotulo-metrica">Anos no Ecossistema Tech</span>
-        </li>
-      </ul>
-    </section>
-
+    <!-- ========================================== -->
+    <!-- 4. SOLUÇÕES (SERVIÇOS)                     -->
+    <!-- ========================================== -->
     <section id="servicos" class="secao-servicos">
       
       <div class="servicos-cabecalho">
         <div class="servicos-titulos">
-          <span class="subtitulo-secao">O que oferecemos</span>
-          <h2>Nossas Soluções</h2>
+          <h2>Soluções</h2>
         </div>
-        <p class="servicos-subtexto">
-          Projetadas para empresas e profissionais que não aceitam amadorismo técnico nem visual genérico.
-        </p>
       </div>
 
       <div class="grade-servicos">
@@ -146,11 +105,10 @@
         <article class="card-servico">
           <div class="card-servico-topo">
             <span class="icone-servico">🛠️</span>
-            <span class="numero-servico">01</span>
           </div>
           <div class="card-servico-corpo">
             <h3>Dev Web & Plataformas SaaS</h3>
-            <p>Landing pages de alta conversão, portais corporativos e plataformas web responsivas desenvolvidas do zero com código limpo e carregamento instantâneo.</p>
+            <p>Landing pages de alta conversão, portais corporativos e plataformas web responsivas desenvolvidas com código limpo e carregamento instantâneo.</p>
           </div>
           <a href="https://wa.me/5571999999999?text=Quero%20um%20projeto%20de%20Desenvolvimento%20Web" target="_blank" class="link-servico">
             Solicitar Orçamento &rarr;
@@ -160,7 +118,6 @@
         <article class="card-servico">
           <div class="card-servico-topo">
             <span class="icone-servico">🤖</span>
-            <span class="numero-servico">02</span>
           </div>
           <div class="card-servico-corpo">
             <h3>Automação de Processos (RPA)</h3>
@@ -174,11 +131,10 @@
         <article class="card-servico">
           <div class="card-servico-topo">
             <span class="icone-servico">🎨</span>
-            <span class="numero-servico">03</span>
           </div>
           <div class="card-servico-corpo">
             <h3>UI/UX & Design Systems</h3>
-            <p>Design de interfaces modernas com foco em usabilidade, estética Dark Premium e arquitetura de telas pensada para guiar o usuário até a conversão.</p>
+            <p>Design de interfaces modernas com foco em usabilidade, estética Dark Premium e arquitetura pensada para guiar o usuário até a conversão.</p>
           </div>
           <a href="https://wa.me/5571999999999?text=Quero%20um%20design%20de%20interface" target="_blank" class="link-servico">
             Solicitar Orçamento &rarr;
@@ -188,10 +144,9 @@
         <article class="card-servico">
           <div class="card-servico-topo">
             <span class="icone-servico">📸</span>
-            <span class="numero-servico">04</span>
           </div>
           <div class="card-servico-corpo">
-            <h3>Storymaker & Produção de Conteúdo</h3>
+            <h3>Storymaker & Conteúdo</h3>
             <p>Cobertura de eventos presenciais em tempo real, fotos, vídeos dinâmicos, cronograma de publicações e alinhamento visual para valorizar seu perfil.</p>
           </div>
           <a href="https://wa.me/5571999999999?text=Quero%20produção%20de%20conteúdo%20e%20storymaker" target="_blank" class="link-servico">
@@ -202,86 +157,88 @@
       </div>
     </section>
 
-    <section id="depoimentos" class="secao-depoimentos">
+    <!-- ========================================== -->
+    <!-- 5. MEUS PROJETOS COM FILTROS               -->
+    <!-- ========================================== -->
+    <section id="projetos" class="secao-projetos">
       
-      <div class="depoimentos-cabecalho">
-        <h2>Depoimentos</h2>
-        <p>A experiência de quem contratou a LanaaTech.</p>
-      </div>
-
-      <div class="carrossel-wrapper">
-        <div id="carousel-track" class="carrossel-trilho">
-          <div id="carousel-slides" class="carrossel-slides">
-            
-            <div class="slide-item">
-              <div class="card-depoimento">
-                <p class="depoimento-texto">
-                  "A LanaaTech entregou uma landing page com velocidade e visual impecável. Nossos clientes elogiam a facilidade de navegação e as conversões aumentaram."
-                </p>
-                <div class="depoimento-autor">
-                  <h4>Mariana Silva</h4>
-                  <span>Studio Estética</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="slide-item">
-              <div class="card-depoimento">
-                <p class="depoimento-texto">
-                  "A cobertura como storymaker no nosso evento corporativo foi fantástica. Entrega dinâmica em tempo real e muita presença nas redes."
-                </p>
-                <div class="depoimento-autor">
-                  <h4>Carlos Eduardo</h4>
-                  <span>Diretor de Eventos</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="slide-item">
-              <div class="card-depoimento">
-                <p class="depoimento-texto">
-                  "As automações criadas economizaram horas da nossa equipe em planilhas financeiras. Engenharia pura, sem complicação."
-                </p>
-                <div class="depoimento-autor">
-                  <h4>Renata Castro</h4>
-                  <span>Gestão de Operações</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <div class="servicos-cabecalho">
+        <div class="servicos-titulos">
+          <h2>Meus Projetos</h2>
         </div>
-
-        <button id="prev-btn" class="btn-carrossel btn-prev" aria-label="Anterior">&#10094;</button>
-        <button id="next-btn" class="btn-carrossel btn-next" aria-label="Próximo">&#10095;</button>
+        <p class="servicos-subtexto">Explore os projetos desenvolvidos e em produção.</p>
       </div>
-    </section>
 
-    <section class="secao-cta-final">
-      <div class="cta-final-grade">
+      <!-- Filtros -->
+      <div class="container-filtro">
+        <button class="botao-filtro active" data-filter="todos">Todos</button>
+        <button class="botao-filtro" data-filter="dev">Desenvolvimento</button>
+        <button class="botao-filtro" data-filter="automacao">Automação</button>
+        <button class="botao-filtro" data-filter="uiux">UI/UX</button>
+      </div>
+
+      <!-- Grade de Projetos -->
+      <div class="grade-projetos">
         
-        <div class="cta-final-conteudo">
-          <h2>Pronto para colocar o seu projeto no ar?</h2>
-          <p>Atendimento direto, orçamento sob medida e entrega técnica de alto nível. Fale comigo agora.</p>
-          <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20vamos%20conversar%20sobre%20o%20meu%20projeto!" target="_blank" class="btn-primary btn-lg">
-            Iniciar Conversa no WhatsApp
-          </a>
-        </div>
-
-        <div class="cta-final-imagem">
-          <div class="moldura-circular-foto">
-            <img src="src/image/lana_profile.png" alt="LanaaTech">
+        <!-- Projeto 1 -->
+        <article class="card-projeto" data-category="dev">
+          <div class="projeto-thumb">
+            <img src="src/image/projects/SIte Aula - Deadpool.png" alt="Deadpool Platform">
+            <div class="projeto-overlay">
+              <a href="https://lanaatech.github.io/deadpool-tribute-page/" target="_blank" class="btn-overlay">Demo ↗</a>
+              <a href="https://github.com/lanaatech/deadpool-tribute-page" target="_blank" class="btn-overlay">GitHub</a>
+            </div>
           </div>
-        </div>
+          <div class="projeto-info">
+            <span class="tag-projeto">Full Stack & IA</span>
+            <h3>Deadpool Event Platform</h3>
+            <p>Plataforma interativa com assistente integrado via RAG e Supabase.</p>
+          </div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="card-projeto" data-category="automacao">
+          <div class="projeto-thumb">
+            <img src="src/image/projects/Gerenciador-de-tasks.png" alt="Gerenciador de Tasks">
+            <div class="projeto-overlay">
+              <a href="https://lanaatech.github.io/task-master-pro" target="_blank" class="btn-overlay">Demo ↗</a>
+              <a href="https://github.com/lanaatech/task-master-pro" target="_blank" class="btn-overlay">GitHub</a>
+            </div>
+          </div>
+          <div class="projeto-info">
+            <span class="tag-projeto">Automação & Processos</span>
+            <h3>Task Master Pro</h3>
+            <p>Painel de controle com rotinas automáticas de gerenciamento.</p>
+          </div>
+        </article>
+
+        <!-- Projeto 3 -->
+        <article class="card-projeto" data-category="uiux">
+          <div class="projeto-thumb">
+            <img src="src/image/projects/CardInterativoRed.png" alt="Card Interativo">
+            <div class="projeto-overlay">
+              <a href="#" class="btn-overlay">Demo ↗</a>
+            </div>
+          </div>
+          <div class="projeto-info">
+            <span class="tag-projeto">UI/UX & Design</span>
+            <h3>Card Interativo Red</h3>
+            <p>Componente de interface fluido focado em microinterações.</p>
+          </div>
+        </article>
 
       </div>
+
     </section>
 
   </main>
 
+  <!-- ========================================== -->
+  <!-- 6. FOOTER                                  -->
+  <!-- ========================================== -->
   <footer id="contato">
     <div class="container footer-container">
-      
+
       <div class="footer-grade">
         
         <div class="footer-col-marca">
@@ -292,9 +249,9 @@
         <div class="footer-col-links">
           <h4>Navegação</h4>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#servicos">Soluções</a></li>
+            <li><a href="#projetos">Projetos</a></li>
           </ul>
         </div>
 
@@ -303,13 +260,11 @@
           <ul>
             <li>
               <a href="https://instagram.com/lanaatech" target="_blank" class="link-social">
-                <svg class="icone-svg-social" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 2.156 4.919 5.419.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 5.271-4.919 5.419-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-2.199-4.919-5.42-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-5.271 4.919-5.419 1.265-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 <span>Instagram (@lanaatech)</span>
               </a>
             </li>
             <li>
               <a href="https://wa.me/5571999999999" target="_blank" class="link-social">
-                <span class="icone-texto-roxo">💬</span>
                 <span>WhatsApp Comercial</span>
               </a>
             </li>
