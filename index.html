@@ -1,284 +1,440 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LanaaTech | Soluções Digitais</title>
-  <link rel="icon" type="image/x-icon" href="./src/image/lanaatech_icone.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-bg-dark: #000000;
+            --color-bg-card: #18181b;
+            --color-bg-surface: #101014;
+            --color-accent-purple: #510089;
+            --color-accent-neon: #ab35ff;
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="src/css/style.css">
-  <script defer src="src/js/main.js"></script>
+            --color-text-white: #ffffff;
+            --color-text-gray: #a0a0a0;
+            --color-text-dim: #606070;
+            --color-border-subtle: rgba(255, 255, 255, 0.08);
+            --color-border-focus: rgba(171, 53, 255, 0.5);
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-bg-dark text-text-gray font-sans antialiased selection:bg-accent-neon selection:text-white">
 
-  <!-- ========================================== -->
-  <!-- 1. HEADER / NAVBAR                         -->
-  <!-- ========================================== -->
-  <header id="cabecalho">
-    <div class="container container-nav">
-      
-      <a href="./" class="nav-logo">
-        <img src="src/image/lanaatech_logo.png" alt="Logo LanaaTech" id="logo-lanaatech">
-      </a>
+    <header class="border-b border-border-subtle bg-bg-surface/80 backdrop-blur sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex items-center font-medium text-text-white mb-4 md:mb-0 cursor-pointer">
+                <img src="./image/lanaatech.png" alt="Lanaa Tech" class="w-50 rounded-full mr-2">
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center gap-6 text-text-gray">
+                <a href="#hero" class="hover:text-text-white transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-text-white transition-colors">Serviços</a>
+                <a href="#projetos" class="hover:text-text-white transition-colors">Projetos</a>
+                <a href="#depoimentos" class="hover:text-text-white transition-colors">Depoimentos</a>
+            </nav>
 
-       <nav class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="#inicio" class="nav-link">Home</a></li>
-          <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#projetos" class="nav-link">Projetos</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-cta">
-        <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20gostaria%20de%20um%20orçamento!" target="_blank"
-          class="btn-primary btn-sm">
-          Iniciar Projeto
-        </a>
-      </div>
-
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- ========================================== -->
-    <!-- 2. HERO PRINCIPAL                          -->
-    <!-- ========================================== -->
-    <section id="inicio" class="hero-section">
-      <div class="hero-glow"></div>
-
-      <div class="hero-topo">
-
-        <h1 class="hero-titulo">
-          Tiro sua ideia do papel<br>
-          <span class="texto-degrade">e coloco sua empresa no topo</span>
-        </h1>
-
-         <ul class="grade-metricas">
-        <li class="item-metrica">
-          <h3 class="numero-metrica cor-roxa stats-count" num="15">+15</h3>
-          <span class="rotulo-metrica">Projetos Entregues</span>
-        </li>
-        <li class="item-metrica">
-          <h3 class="numero-metrica stats-count" num="100">100%</h3>
-          <span class="rotulo-metrica">Foco em Qualidade</span>
-        </li>
-        <li class="item-metrica">
-          <h3 class="numero-metrica cor-roxa stats-count" num="4">+4</h3>
-          <span class="rotulo-metrica">Anos em Tech</span>
-        </li>
-      </ul>
-
-        <div class="hero-acoes">
-          <a href="https://wa.me/5571999999999?text=Olá%20Ilana,%20gostaria%20de%20um%20orçamento!" target="_blank" class="btn-primary">
-            <span>Solicitar Orçamento</span>
-            <span class="btn-seta">&rarr;</span>
-          </a>
-          <a href="#servicos" class="btn-secondary">
-            Explorar Soluções
-          </a>
+            <a href="#contato"
+                class="inline-flex items-center bg-bg-card border border-border-subtle text-text-white ml-6 py-2 px-4 focus:outline-none hover:border-accent-neon hover:text-accent-neon rounded-lg text-sm mt-4 md:mt-0 transition-all">
+                Iniciar Projeto
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
         </div>
-      </div>
+    </header>
+
+    <section id="hero" class="border-b border-border-subtle">
+        <div class="container mx-auto flex px-8 py-8 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1
+                    class="text-4xl sm:text-6xl lg:text-6xl font-bold text-text-white tracking-tight leading-tight mb-4">
+                    Tiro sua ideia do papel<br>
+                    <span
+                        class="bg-gradient-to-r from-text-white from-40% to-accent-neon bg-clip-text text-transparent">
+                        e coloco sua empresa no topo.
+                    </span>
+                </h1>
+                <p class="mb-8 text-lg leading-relaxed text-text-gray">
+                    Pare de perder tempo e dinheiro com processos manuais, planilhas quebradas e um site que não
+                    converte. O problema não é falta de esforço, é falta de tecnologia.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="#projetos"
+                        class="inline-flex text-white bg-accent-purple hover:bg-accent-neon font-medium border-0 py-2.5 px-6 focus:outline-none rounded-lg text-base transition-all shadow-lg shadow-accent-purple/20">
+                        Ver Projetos
+                    </a>
+                    <a href="#contato"
+                        class="inline-flex text-text-white bg-bg-card hover:bg-bg-surface border border-border-subtle hover:border-accent-neon/50 font-medium py-2.5 px-6 focus:outline-none rounded-lg text-base transition-all">
+                        Fale Comigo
+                    </a>
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded-2xl shadow-2xl" alt="hero" src="./image/lanaatech_foto.png">
+            </div>
+        </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- 4. SOLUÇÕES (SERVIÇOS)                     -->
-    <!-- ========================================== -->
-    <section id="servicos" class="secao-servicos">
-      
-      <div class="servicos-cabecalho">
-        <div class="servicos-titulos">
-          <h2>Soluções</h2>
+    <section id="servicos" class="bg-bg-surface border-b border-border-subtle">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-3xl font-bold text-text-white">Serviços & Especialidades</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-text-gray mt-2">
+                    Soluções sob medida para desenvolvimento web, interfaces intuitivas e estruturação de projetos
+                    modernos de ponta a ponta.
+                </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div
+                        class="bg-bg-card p-6 rounded-xl border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 h-full flex flex-col justify-between">
+                        <div>
+                            <img class="h-40 rounded-lg w-full object-cover object-center mb-6"
+                                src="https://dummyimage.com/720x400" alt="content">
+                            <h4 class="text-lg text-accent-neon font-semibold mb-2">Desenvolvimento</h4>
+                            <p class="leading-relaxed text-sm text-text-gray mb-2">Seu produto ainda não saiu do papel,
+                                ou já
+                                saiu mas não vende. Eu construo a solução pronta pra crescer com seu negócio.</p>
+                        </div>
+                        <a href="https://wa.me/5571999999999?text=Quero%20automatizar%20processos%20na%20minha%20empresa"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center text-sm font-semibold text-accent-neon hover:text-white transition-colors duration-200">
+                            Solicitar Orçamento
+                            <span
+                                class="ml-2 inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div
+                        class="bg-bg-card p-6 rounded-xl border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 h-full flex flex-col justify-between">
+                        <div>
+                            <img class="h-40 rounded-lg w-full object-cover object-center mb-6"
+                                src="https://dummyimage.com/721x401" alt="content">
+                            <h4 class="text-lg text-accent-neon font-semibold mb-2">Automação de Processos</h4>
+                            <p class="leading-relaxed text-sm text-text-gray mb-2">Tarefas repetitivas consumindo horas?
+                                Soluções inteligentes para otimizar e automatizar seus processos internos. </p>
+                        </div>
+                        <a href="https://wa.me/5571999999999?text=Quero%20automatizar%20processos%20na%20minha%20empresa"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center text-sm font-semibold text-accent-neon hover:text-white transition-colors duration-200">
+                            Solicitar Orçamento
+                            <span
+                                class="ml-2 inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div
+                        class="bg-bg-card p-6 rounded-xl border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 h-full flex flex-col justify-between">
+                        <div>
+                            <img class="h-40 rounded-lg w-full object-cover object-center mb-6"
+                                src="https://dummyimage.com/722x402" alt="content">
+                            <h4 class="text-lg text-accent-neon font-semibold mb-2">UI/UX & Design Systems</h4>
+                            <p class="leading-relaxed text-sm text-text-gray">Da experiência e ao sistema visual que
+                                guia o usuário até a conversão, com consistência, do primeiro clique ao último.</p>
+                        </div>
+                        <a href="https://wa.me/5571999999999?text=Quero%20automatizar%20processos%20na%20minha%20empresa"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center text-sm font-semibold text-accent-neon hover:text-white transition-colors duration-200">
+                            Solicitar Orçamento
+                            <span
+                                class="ml-2 inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="xl:w-1/4 md:w-1/2 p-4">
+                    <div
+                        class="bg-bg-card p-6 rounded-xl border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 h-full flex flex-col justify-between">
+                        <div>
+                            <img class="h-40 rounded-lg w-full object-cover object-center mb-6"
+                                src="https://dummyimage.com/723x403" alt="content">
+                            <h4 class="text-lg text-accent-neon font-semibold mb-2">Storymaker & Conteúdo</h4>
+                            <p class="leading-relaxed text-sm text-text-gray">Conteúdo estratégico e criativo para
+                                engajar seu público. Transformo o que você faz em uma história, que conecta com quem
+                                comprar.</p>
+                        </div>
+                        <a href="https://wa.me/5571999999999?text=Quero%20automatizar%20processos%20na%20minha%20empresa"
+                            target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center text-sm font-semibold text-accent-neon hover:text-white transition-colors duration-200">
+                            Solicitar Orçamento
+                            <span
+                                class="ml-2 inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="grade-servicos">
-        
-        <article class="card-servico">
-          <div class="card-servico-topo">
-            <span class="icone-servico">🛠️</span>
-          </div>
-          <div class="card-servico-corpo">
-            <h3>Dev Web & Plataformas SaaS</h3>
-            <p>Landing pages de alta conversão, portais corporativos e plataformas web responsivas desenvolvidas com código limpo e carregamento instantâneo.</p>
-          </div>
-          <a href="https://wa.me/5571999999999?text=Quero%20um%20projeto%20de%20Desenvolvimento%20Web" target="_blank" class="link-servico">
-            Solicitar Orçamento &rarr;
-          </a>
-        </article>
-
-        <article class="card-servico">
-          <div class="card-servico-topo">
-            <span class="icone-servico">🤖</span>
-          </div>
-          <div class="card-servico-corpo">
-            <h3>Automação de Processos (RPA)</h3>
-            <p>Eliminação de gargalos operacionais e tarefas repetitivas através de scripts em Python e integrações de dados para poupar tempo e dinheiro.</p>
-          </div>
-          <a href="https://wa.me/5571999999999?text=Quero%20automatizar%20processos%20na%20minha%20empresa" target="_blank" class="link-servico">
-            Solicitar Orçamento &rarr;
-          </a>
-        </article>
-
-        <article class="card-servico">
-          <div class="card-servico-topo">
-            <span class="icone-servico">🎨</span>
-          </div>
-          <div class="card-servico-corpo">
-            <h3>UI/UX & Design Systems</h3>
-            <p>Design de interfaces modernas com foco em usabilidade, estética Dark Premium e arquitetura pensada para guiar o usuário até a conversão.</p>
-          </div>
-          <a href="https://wa.me/5571999999999?text=Quero%20um%20design%20de%20interface" target="_blank" class="link-servico">
-            Solicitar Orçamento &rarr;
-          </a>
-        </article>
-
-        <article class="card-servico">
-          <div class="card-servico-topo">
-            <span class="icone-servico">📸</span>
-          </div>
-          <div class="card-servico-corpo">
-            <h3>Storymaker & Conteúdo</h3>
-            <p>Cobertura de eventos presenciais em tempo real, fotos, vídeos dinâmicos, cronograma de publicações e alinhamento visual para valorizar seu perfil.</p>
-          </div>
-          <a href="https://wa.me/5571999999999?text=Quero%20produção%20de%20conteúdo%20e%20storymaker" target="_blank" class="link-servico">
-            Solicitar Orçamento &rarr;
-          </a>
-        </article>
-
-      </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- 5. MEUS PROJETOS COM FILTROS               -->
-    <!-- ========================================== -->
-    <section id="projetos" class="secao-projetos">
-      
-      <div class="servicos-cabecalho">
-        <div class="servicos-titulos">
-          <h2>Meus Projetos</h2>
+    <section id="projetos" class="border-b border-border-subtle">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-3xl font-bold text-text-white">Projetos: O que acontece quando a dor vira produto</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-text-gray mt-2">
+                    Confira alguns dos principais trabalhos desenvolvidos recentemente.
+                </p>
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article
+                    class="card-projeto group relative bg-bg-card rounded-2xl overflow-hidden border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 flex flex-col justify-between"
+                    data-category="dev">
+                    <div class="relative overflow-hidden aspect-video bg-bg-surface">
+                        <img src="./image/projects/SIte Aula - Deadpool.png" alt="Deadpool Platform"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-bg-dark/80 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 p-4">
+                            <a href="https://lanaatech.github.io/deadpool-tribute-page/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="px-4 py-2 bg-accent-purple hover:bg-accent-neon text-white text-xs sm:text-sm font-medium rounded-lg shadow-lg transition-all duration-200">
+                                Demo ↗
+                            </a>
+                            <a href="https://github.com/lanaatech/deadpool-tribute-page" target="_blank"
+                                rel="noopener noreferrer"
+                                class="px-4 py-2 bg-bg-surface border border-border-subtle hover:border-accent-neon text-text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-200">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col grow justify-between">
+                        <div>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                Full Stack & IA
+                            </span>
+                            <h3
+                                class="text-xl font-bold text-text-white mb-2 group-hover:text-accent-neon transition-colors">
+                                Deadpool Event Platform
+                            </h3>
+                            <p class="text-text-gray text-sm leading-relaxed mb-4">
+                                Plataforma interativa com assistente integrado via RAG e Supabase.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="card-projeto group relative bg-bg-card rounded-2xl overflow-hidden border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 flex flex-col justify-between"
+                    data-category="automacao">
+                    <div class="relative overflow-hidden aspect-video bg-bg-surface">
+                        <img src="./image/convite-caua.png" alt="Convite Virtual Cauã"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-bg-dark/80 backdrop-blur-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 p-2">
+                            <a href="https://github.com/lanaatech/task-master-pro" target="_blank" class="px-4 py-2 bg-bg-surface border border-border-subtle hover:border-accent-neon text-text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-200">
+                                <img src="./image/icones/web-icone.png" alt="">
+                            </a>
+                            <a href="https://github.com/lanaatech/task-master-pro" target="_blank"
+                                rel="noopener noreferrer"
+                                class="px-4 py-2 bg-bg-surface border border-border-subtle hover:border-accent-neon text-text-white text-xs sm:text-sm font-medium rounded-lg transition-all duration-200">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col grow justify-between">
+                        <div>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                Html
+                            </span>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                Css
+                            </span>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                Javascript
+                            </span>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                Tailwind css
+                            </span>
+                            <h3
+                                class="text-xl font-bold text-text-white mb-2 group-hover:text-accent-neon transition-colors">
+                                Task Master Pro
+                            </h3>
+                            <p class="text-text-gray text-sm leading-relaxed mb-4">
+                                Painel de controle com rotinas automáticas de gerenciamento.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="card-projeto group relative bg-bg-card rounded-2xl overflow-hidden border border-border-subtle hover:border-accent-neon/40 transition-all duration-300 flex flex-col justify-between"
+                    data-category="uiux">
+                    <div class="relative overflow-hidden aspect-video bg-bg-surface">
+                        <img src="src/image/projects/CardInterativoRed.png" alt="Card Interativo"
+                            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+
+                        <div
+                            class="absolute inset-0 bg-bg-dark/80 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 p-4">
+                            <a href="#" target="_blank" rel="noopener noreferrer"
+                                class="px-4 py-2 bg-accent-purple hover:bg-accent-neon text-white text-xs sm:text-sm font-medium rounded-lg shadow-lg transition-all duration-200">
+                                Demo ↗
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col grow justify-between">
+                        <div>
+                            <span
+                                class="inline-block text-[11px] font-semibold uppercase tracking-wider text-accent-neon bg-accent-purple/20 border border-accent-neon/30 px-2.5 py-1 rounded-md mb-3">
+                                UI/UX & Design
+                            </span>
+                            <h3
+                                class="text-xl font-bold text-text-white mb-2 group-hover:text-accent-neon transition-colors">
+                                Card Interativo Red
+                            </h3>
+                            <p class="text-text-gray text-sm leading-relaxed mb-4">
+                                Componente de interface fluido focado em microinterações.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
-        <p class="servicos-subtexto">Explore os projetos desenvolvidos e em produção.</p>
-      </div>
-
-      <!-- Filtros -->
-      <div class="container-filtro">
-        <button class="botao-filtro active" data-filter="todos">Todos</button>
-        <button class="botao-filtro" data-filter="dev">Desenvolvimento</button>
-        <button class="botao-filtro" data-filter="automacao">Automação</button>
-        <button class="botao-filtro" data-filter="uiux">UI/UX</button>
-      </div>
-
-      <!-- Grade de Projetos -->
-      <div class="grade-projetos">
-        
-        <!-- Projeto 1 -->
-        <article class="card-projeto" data-category="dev">
-          <div class="projeto-thumb">
-            <img src="src/image/projects/SIte Aula - Deadpool.png" alt="Deadpool Platform">
-            <div class="projeto-overlay">
-              <a href="https://lanaatech.github.io/deadpool-tribute-page/" target="_blank" class="btn-overlay">Demo ↗</a>
-              <a href="https://github.com/lanaatech/deadpool-tribute-page" target="_blank" class="btn-overlay">GitHub</a>
-            </div>
-          </div>
-          <div class="projeto-info">
-            <span class="tag-projeto">Full Stack & IA</span>
-            <h3>Deadpool Event Platform</h3>
-            <p>Plataforma interativa com assistente integrado via RAG e Supabase.</p>
-          </div>
-        </article>
-
-        <!-- Projeto 2 -->
-        <article class="card-projeto" data-category="automacao">
-          <div class="projeto-thumb">
-            <img src="src/image/projects/Gerenciador-de-tasks.png" alt="Gerenciador de Tasks">
-            <div class="projeto-overlay">
-              <a href="https://lanaatech.github.io/task-master-pro" target="_blank" class="btn-overlay">Demo ↗</a>
-              <a href="https://github.com/lanaatech/task-master-pro" target="_blank" class="btn-overlay">GitHub</a>
-            </div>
-          </div>
-          <div class="projeto-info">
-            <span class="tag-projeto">Automação & Processos</span>
-            <h3>Task Master Pro</h3>
-            <p>Painel de controle com rotinas automáticas de gerenciamento.</p>
-          </div>
-        </article>
-
-        <!-- Projeto 3 -->
-        <article class="card-projeto" data-category="uiux">
-          <div class="projeto-thumb">
-            <img src="src/image/projects/CardInterativoRed.png" alt="Card Interativo">
-            <div class="projeto-overlay">
-              <a href="#" class="btn-overlay">Demo ↗</a>
-            </div>
-          </div>
-          <div class="projeto-info">
-            <span class="tag-projeto">UI/UX & Design</span>
-            <h3>Card Interativo Red</h3>
-            <p>Componente de interface fluido focado em microinterações.</p>
-          </div>
-        </article>
-
-      </div>
-
     </section>
 
-  </main>
+    <section id="depoimentos" class="bg-bg-surface border-b border-border-subtle">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-3xl font-bold text-text-white">Depoimentos</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-text-gray mt-2">
+                    Soluções sob medida para desenvolvimento web, interfaces intuitivas e estruturação de projetos
+                    modernos de ponta a ponta.
+                </p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                    <div class="h-full text-center bg-bg-card p-6 rounded-xl border border-border-subtle">
+                        <img alt="testimonial"
+                            class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-accent-neon/50 bg-bg-surface"
+                            src="https://dummyimage.com/302x302">
+                        <p class="leading-relaxed text-sm text-text-gray">"Excelente senso estético e capacidade técnica
+                            para entregar soluções completas e organizadas no prazo."</p>
+                        <span class="inline-block h-1 w-10 rounded bg-accent-neon mt-6 mb-4"></span>
+                        <h3 class="text-text-white font-medium tracking-wider text-sm">HOLDEN CAULFIELD</h3>
+                        <p class="text-text-dim text-xs">Senior Product Designer</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                    <div class="h-full text-center bg-bg-card p-6 rounded-xl border border-border-subtle">
+                        <img alt="testimonial"
+                            class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-accent-neon/50 bg-bg-surface"
+                            src="https://dummyimage.com/300x300">
+                        <p class="leading-relaxed text-sm text-text-gray">"Comunicação clara e grande atenção a detalhes
+                            que fazem toda a diferença na experiência do produto final."</p>
+                        <span class="inline-block h-1 w-10 rounded bg-accent-neon mt-6 mb-4"></span>
+                        <h3 class="text-text-white font-medium tracking-wider text-sm">ALPER KAMU</h3>
+                        <p class="text-text-dim text-xs">UI Developer</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 lg:mb-0 p-4">
+                    <div class="h-full text-center bg-bg-card p-6 rounded-xl border border-border-subtle">
+                        <img alt="testimonial"
+                            class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-accent-neon/50 bg-bg-surface"
+                            src="https://dummyimage.com/305x305">
+                        <p class="leading-relaxed text-sm text-text-gray">"Código muito bem estruturado, rápido e fácil
+                            de manter. Um prazer colaborar em projetos conjuntos."</p>
+                        <span class="inline-block h-1 w-10 rounded bg-accent-neon mt-6 mb-4"></span>
+                        <h3 class="text-text-white font-medium tracking-wider text-sm">HENRY LETHAM</h3>
+                        <p class="text-text-dim text-xs">CTO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ========================================== -->
-  <!-- 6. FOOTER                                  -->
-  <!-- ========================================== -->
-  <footer id="contato">
-    <div class="container footer-container">
-
-      <div class="footer-grade">
-        
-        <div class="footer-col-marca">
-          <img src="src/image/lanaatech_logo.png" alt="Logo LanaaTech" class="footer-logo">
-          <p>Menos enrolação, mais engenharia e resultados.</p>
+    <footer id="contato" class="bg-bg-surface">
+        <div class="container px-5 py-16 mx-auto">
+            <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4 justify-between">
+                <div class="lg:w-1/3 md:w-1/2 w-full px-4 mb-10 md:mb-0">
+                    <h3 class="font-bold text-text-white tracking-widest text-sm mb-3 uppercase">Sobre</h3>
+                    <p class="text-text-gray text-sm leading-relaxed pr-6">
+                        Desenvolvendo soluções digitais focadas em eficiência, usabilidade e design contemporâneo.
+                    </p>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4 mb-10 md:mb-0">
+                    <h3 class="font-bold text-text-white tracking-widest text-sm mb-3 uppercase">Navegação</h3>
+                    <ul class="list-none space-y-2 text-sm text-text-gray">
+                        <li><a href="#hero" class="hover:text-accent-neon transition-colors">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-accent-neon transition-colors">Serviços</a></li>
+                        <li><a href="#projetos" class="hover:text-accent-neon transition-colors">Projetos</a></li>
+                        <li><a href="#depoimentos" class="hover:text-accent-neon transition-colors">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/3 md:w-full w-full px-4">
+                    <h3 class="font-bold text-text-white tracking-widest text-sm mb-3 uppercase">Newsletter / Contato
+                    </h3>
+                    <div class="flex flex-col sm:flex-row items-center gap-2">
+                        <input type="email" placeholder="seuemail@exemplo.com"
+                            class="w-full bg-bg-card rounded-lg border border-border-subtle focus:border-border-focus focus:ring-1 focus:ring-accent-neon text-sm outline-none text-text-white py-2 px-3 transition-colors">
+                        <button
+                            class="w-full sm:w-auto inline-flex justify-center text-white bg-accent-purple hover:bg-accent-neon border-0 py-2 px-4 focus:outline-none rounded-lg text-sm transition-all whitespace-nowrap">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-col-links">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#inicio">Home</a></li>
-            <li><a href="#servicos">Soluções</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-          </ul>
+        <div class="border-t border-border-subtle bg-bg-dark">
+            <div
+                class="container mx-auto py-6 px-5 flex flex-wrap flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-text-dim text-xs text-center sm:text-left">
+                    © 2026 Portfólio — Todos os direitos reservados.
+                </p>
+                <span class="inline-flex gap-4 text-text-dim">
+                    <a class="hover:text-accent-neon transition-colors cursor-pointer">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-4 h-4" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a class="hover:text-accent-neon transition-colors cursor-pointer">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-4 h-4" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="hover:text-accent-neon transition-colors cursor-pointer">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a class="hover:text-accent-neon transition-colors cursor-pointer">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-4 h-4" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
         </div>
-
-        <div class="footer-col-redes">
-          <h4>Canais Oficiais</h4>
-          <ul>
-            <li>
-              <a href="https://instagram.com/lanaatech" target="_blank" class="link-social">
-                <span>Instagram (@lanaatech)</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/5571999999999" target="_blank" class="link-social">
-                <span>WhatsApp Comercial</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-copyright">
-        <p>&copy; 2026 LanaaTech por Ilana Nascimento. Todos os direitos reservados.</p>
-      </div>
-
-    </div>
-  </footer>
+    </footer>
 
 </body>
+
 </html>
